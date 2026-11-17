@@ -1128,6 +1128,25 @@
           0 0 14px rgba(255, 255, 255, 0.95),
           0 0 26px rgba(255, 255, 255, 0.85);
       }
+
+      /* ===== Page 1: square couple photo (faces visible), text moved down ===== */
+      .p1::after {
+        inset: auto;
+        top: 20dvh;
+        left: 50%;
+        width: min(100%, 56dvh);
+        aspect-ratio: 1 / 1;
+        transform: translateX(-50%);
+        background: var(--photo) center/100% 100% no-repeat;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 8%, #000 76%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0, #000 8%, #000 76%, transparent 100%);
+      }
+      .p1 .inner.hero { justify-content: space-between; }
+      .p1 .mid { margin-top: 0; padding-top: 9dvh; }
+      .p1 .scroll-cue {
+        color: #fff;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+      }
     </style>
   </head>
   <body>
